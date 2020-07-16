@@ -24,7 +24,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
+  opacity: 1;
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
@@ -55,7 +55,8 @@
     .menu-branding .portrait {
       width: 250px;
       height: 250px;
-      background: url(../images/portrait.jpg);
+      background-image: url(../images/portrait.jpg);
+      background-size: cover;
       border-radius: 50%;
       border: solid 3px #eece1a; }
   .menu .nav-item {
@@ -165,6 +166,8 @@ main {
   .about-info .bio-image {
     grid-area: bioimage;
     margin: auto;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     border: 3px solid #eece1a; }
   .about-info .bio {
@@ -191,6 +194,24 @@ main {
       opacity: 0.5;
       border-color: #eece1a;
       transition: all 0.5s ease-out; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 1.5rem;
+    border: 3px solid #fff;
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .boxes div:hover {
+      background-color: #eece1a;
+      color: #000; }
+      .boxes div:hover span {
+        color: #000; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
@@ -247,7 +268,8 @@ main {
     height: 25vh;
     transform: translate3d(100%, 0, 0); }
     .menu-branding .portrait {
-      background: url(../images/portrait_small.jpg);
+      background-image: url(../images/portrait.jpg);
+      background-size: cover;
       width: 150px;
       height: 150px; }
   .about-info {
